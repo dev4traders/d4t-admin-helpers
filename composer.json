@@ -1,0 +1,33 @@
+{
+    "name": "dev4traders/d4t-admin-lang-helpers",
+    "alias": "helpers",
+    "description": "helpers",
+    "type": "library",
+    "keywords": ["dcat-admin", "helpers"],
+    "homepage": "https://github.com/dev4traders/d4t-admin-helpers",
+    "license": "MIT",
+    "version": "1.1.1",
+    "authors": [
+        {
+            "name": "mikha",
+            "email": "mikha.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "mikha-dev/dcat-admin": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "D4T\\Admin\\Helpers\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "D4T\\Admin\\Helpers\\ServiceProvider",
+        "laravel": {
+            "providers": [
+                "D4T\\Admin\\Helpers\\ServiceProvider"
+            ]
+        }
+    }
+}
