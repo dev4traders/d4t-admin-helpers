@@ -29,8 +29,8 @@ class IconController extends Controller
             $tab = Tab::make()
                 ->withCard()
                 ->padding('20px')
-                ->add(('Feather'), view('dev4traders.d4t-admin-helpers.feather'))
-                ->add(('Font Awesome'), view('dev4traders.d4t-admin-helpers.font-awesome'));
+                ->add(('Feather'), view('dev4traders.d4t-admin-helpers::feather'))
+                ->add(('Font Awesome'), view('dev4traders.d4t-admin-helpers::font-awesome'));
 
             $row->column(12, $tab);
         });

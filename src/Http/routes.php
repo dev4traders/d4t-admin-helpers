@@ -1,13 +1,11 @@
 <?php
 
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
+use D4T\Admin\Helpers\Http\Controllers\IconController;
+use D4T\Admin\Helpers\Http\Controllers\ScaffoldController;
+use D4T\Admin\Helpers\ServiceProvider;
 
-Route::group([
-    'middleware'    => config('admin.route.middleware')
-], function (Router $router) {
-    $router->get('helpers/scaffold', 'D4T\Admin\Helpers\Http\Controllers\ScaffoldController@index');
-    $router->post('helpers/scaffold', 'D4T\Admin\Helpers\Http\Controllers\ScaffoldController@store');
-    $router->post('helpers/scaffold/table', 'D4T\Admin\Helpers\Http\Controllers\ScaffoldController@table');
-    $router->get('helpers/icons', 'D4T\Admin\Helpers\Http\Controllers\IconController@index');
-});
+Route::get(ServiceProvider::URL_HELPERS_SCAFFOLD, ScaffoldController::class.'@index');
+Route::post(ServiceProvider::URL_HELPERS_SCAFFOLD, ScaffoldController::class.'@store');
+Route::post(ServiceProvider::URL_HELPERS_SCAFFOLD.'/table', ScaffoldController::class.'@table');
+Route::get(ServiceProvider::URL_HELPERS_ICONS, IconController::class.'@index');

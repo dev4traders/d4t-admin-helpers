@@ -1,5 +1,5 @@
 {
-    "name": "dev4traders/d4t-admin-lang-helpers",
+    "name": "dev4traders/d4t-admin-helpers",
     "alias": "helpers",
     "description": "helpers",
     "type": "library",
