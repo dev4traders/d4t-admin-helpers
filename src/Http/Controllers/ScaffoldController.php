@@ -89,7 +89,7 @@ class ScaffoldController extends Controller
             ->title(trans('admin.scaffold.header'))
             ->description(' ')
             ->body(view(
-                'dev4traders.d4t-admin-helpers.scaffold',
+                'dev4traders.d4t-admin-helpers::scaffold',
                 compact('dbTypes', 'action', 'tables', 'dataTypeMap', 'namespaceBase')
             ));
     }
